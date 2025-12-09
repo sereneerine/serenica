@@ -8,7 +8,7 @@ export default function JobCard({ job }: { job: any }) {
         <div className="text-silver text-sm">{job.status} • {job.createdAt}</div>
       </div>
       <div>
-        <Link href={`/analysis?id=${job.id}`}><a className="bg-helix px-3 py-2 rounded text-midnight">Open</a></Link>
+        <Link href={`/dashboard/tools/annotation/cortex?id=${job.id}`}><a className="bg-helix px-3 py-2 rounded text-midnight">Open</a></Link>
       </div>
     </div>
   );
