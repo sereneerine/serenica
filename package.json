@@ -19,7 +19,7 @@
     "plotly.js": "^2.20.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-flow-renderer": "^10.8.0",
+    "reactflow": "^11.7.4"
     "react-plotly.js": "^2.9.0",
     "react-dropzone": "^14.2.3",
     "react-icons": "^4.10.1",
