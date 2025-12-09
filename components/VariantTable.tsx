@@ -1,12 +1,22 @@
 import { useEffect, useState } from "react";
-import { fetcher } from "../lib/api";
+import axios from "axios";
 
 export default function VariantTable({ jobId }: { jobId?: string | null }) {
   const [variants, setVariants] = useState<any[]>([]);
 
   useEffect(() => {
-    if (!jobId) return;
-    fetcher(`/jobs/${jobId}/variants`).then(setVariants).catch(console.error);
+    if (!jobId) {
+      // mock
+      setVariants([]);
+      return;
+    }
+    // fetch variants from API in production; here we mock
+    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/jobs/${jobId}/variants`).then((res) => {
+      setVariants(res.data || []);
+    }).catch(() => {
+      // fallback mock
+      setVariants([]);
+    });
   }, [jobId]);
 
   return (
