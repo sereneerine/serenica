@@ -8,9 +8,10 @@ export default function Header() {
         <div className="text-white font-semibold">Serenica</div>
       </div>
       <div className="flex items-center gap-4">
+        <Link href="/"><a className="text-silver">Home</a></Link>
         <Link href="/docs"><a className="text-silver">Docs</a></Link>
         <Link href="/pricing"><a className="text-silver">Pricing</a></Link>
-        <Link href="/account"><a className="text-silver">Account</a></Link>
+        <Link href="/dashboard"><a className="text-silver">Dashboard</a></Link>
       </div>
     </header>
   );
