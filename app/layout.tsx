@@ -1,7 +1,7 @@
-import "./globals.css";
-import { ReactNode } from "react";
+import "./../styles/globals.css";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
+import { ReactNode } from "react";
 
 export const metadata = {
   title: "Serenica",
@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Sidebar />
           <div className="flex-1 flex flex-col">
             <Header />
-            <main className="p-6 overflow-auto">{children}</main>
+            <main className="p-6 overflow-auto flex-1">{children}</main>
           </div>
         </div>
       </body>
