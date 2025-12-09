@@ -5,8 +5,7 @@ export default function Home() {
     <div className="container mx-auto px-8 py-12">
       <h1 className="text-4xl font-bold text-white">Serenica — Genomic Intelligence</h1>
       <p className="mt-4 text-silver max-w-2xl">
-        An AI-driven, clinical-grade platform for variant interpretation, multi-omics integration and
-        actionable reports. Try the free trial — upload your VCF and see the future of genomics.
+        An AI-driven, clinical-grade platform for variant interpretation, multi-omics integration and actionable reports.
       </p>
 
       <div className="mt-8 space-x-4">
