@@ -17,22 +17,16 @@ export default function UploadDropzone() {
     if (files.length === 0) return;
     setUploading(true);
     try {
-      // Step 1: request signed upload URL(s) from API
       const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/upload-url`, {
         files: files.map(f => ({ name: f.name, size: f.size, type: f.type }))
       });
       const uploads = res.data as { signedUrls: string[] };
-
-      // Step 2: upload each file directly
       await Promise.all(files.map((file, i) =>
         axios.put(uploads.signedUrls[i], file, { headers: { "Content-Type": file.type } })
       ));
-
-      // Step 3: notify backend to create job
       const jobResp = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/jobs`, {
         files: files.map(f => ({ name: f.name }))
       });
-
       alert("Upload started. Job ID: " + jobResp.data.jobId);
       setFiles([]);
     } catch (err) {
