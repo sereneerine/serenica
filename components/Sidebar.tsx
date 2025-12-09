@@ -12,6 +12,7 @@ export default function Sidebar() {
         <Link href="/dashboard"><a className="flex items-center gap-3 p-3 rounded hover:bg-midnight/40"><FaHome /> Dashboard</a></Link>
         <Link href="/upload"><a className="flex items-center gap-3 p-3 rounded hover:bg-midnight/40"><FaUpload /> Upload</a></Link>
         <Link href="/jobs"><a className="flex items-center gap-3 p-3 rounded hover:bg-midnight/40"><FaList /> Jobs</a></Link>
+        <Link href="/dashboard/tools/annotation/cortex"><a className="flex items-center gap-3 p-3 rounded hover:bg-midnight/40">Cortex</a></Link>
       </nav>
 
       <div className="mt-6">
