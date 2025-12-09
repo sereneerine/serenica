@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global tokens (Serenica theme) */
+:root {
+  --bg: #0A1F44;
+  --accent: #02E9FF;
+  --panel: #2A3644;
+  --muted: #CED5DE;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  @apply bg-midnight text-white font-sans;
+  background-color: var(--bg);
+}
